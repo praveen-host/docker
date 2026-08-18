@@ -6,12 +6,11 @@ namespace SimpleWebAPI.Controllers
     [Route("[controller]")]
     public class WhoIsController : ControllerBase
     {
-          
 
-        [HttpGet(Name = "GetWeatherForecast")]
+        [HttpGet]
         public string Get()
         {
-            return Environment.MachineName;
+            return Environment.MachineName+" "+ System.DateTime.UtcNow;
         }
     }
 }
